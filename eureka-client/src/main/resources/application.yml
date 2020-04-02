@@ -9,3 +9,5 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true #向服务注册中心注册自己
+    fetch-registry: false #不需要获取服务列表
