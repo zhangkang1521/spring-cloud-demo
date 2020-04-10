@@ -2,6 +2,8 @@ server:
   port: 8761
 
 eureka:
+  server:
+    enable-self-preservation: false #关闭自我保护，防止服务踢出不及时
   instance:
     hostname: localhost
   client:

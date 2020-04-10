@@ -10,12 +10,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.zk</groupId>
-    <artifactId>eureka-client</artifactId>
+    <artifactId>user-service</artifactId>
 
-    <name>eureka-client</name>
-
-
-
+    <name>user-service</name>
 
     <dependencies>
         <dependency>
@@ -31,6 +28,5 @@
             <artifactId>spring-cloud-starter-zipkin</artifactId>
         </dependency>
     </dependencies>
-
 
 </project>

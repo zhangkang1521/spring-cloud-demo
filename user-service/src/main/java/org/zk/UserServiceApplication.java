@@ -13,14 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @SpringBootApplication
 @EnableEurekaClient
-public class ServiceHiApplication {
-
-
+public class UserServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run( ServiceHiApplication.class, args );
+		SpringApplication.run( UserServiceApplication.class, args );
 	}
-
-
 
 }
