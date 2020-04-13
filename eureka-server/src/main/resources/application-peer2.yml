@@ -1,18 +1,18 @@
 server:
-  port: 8761
+  port: 8769
 
 eureka:
   server:
     enable-self-preservation: false #关闭自我保护，防止服务踢出不及时
-    eviction-interval-timer-in-ms: 1000 #清理无效服务周期，默认1分钟
   instance:
-    hostname: localhost
+    hostname: peer2
   client:
     registerWithEureka: false #不需要注册服务
     fetchRegistry: false #不需要获取服务列表
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://peer1:8761/eureka/,http://peer1:8769/eureka/
 
 spring:
+  profiles: peer2
   application:
     name: eurka-server
