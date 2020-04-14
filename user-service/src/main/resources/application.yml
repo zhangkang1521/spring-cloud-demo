@@ -13,3 +13,8 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
     register-with-eureka: true #向服务注册中心注册自己
     fetch-registry: true #获取服务列表
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
