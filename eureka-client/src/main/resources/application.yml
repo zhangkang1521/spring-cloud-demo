@@ -10,9 +10,15 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://peer1:8761/eureka/,http://peer1:8769/eureka/
+      defaultZone: http://localhost:8761/eureka/
+#      defaultZone: http://peer1:8761/eureka/,http://peer1:8769/eureka/
     register-with-eureka: true #向服务注册中心注册自己
     fetch-registry: true #获取服务列表
   instance:
     lease-expiration-duration-in-seconds: 3 #多长时间未收到心跳代表过期，默认90s
     lease-renewal-interval-in-seconds: 1 #发送心跳到eureka-server，默认30s
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
